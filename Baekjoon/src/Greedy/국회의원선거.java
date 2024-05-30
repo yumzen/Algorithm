@@ -15,9 +15,12 @@ public class 국회의원선거 {
         Integer arr[] = new Integer[n-1];
         int count = 0;
 
-        if(n==1) System.out.println(0);
+        if(n == 1) {
+            System.out.println(0);
+            return;
+        }
 
-        for(int i =0; i<arr.length; i++){
+        for(int i =0; i< n-1; i++){
             arr[i] = Integer.parseInt(br.readLine());
         }
 
@@ -26,7 +29,7 @@ public class 국회의원선거 {
             if(arr[0]< me) break;
             else{
                 me++;
-                arr[0]-=1;
+                arr[0]--;
                 count++;
             }
         }
