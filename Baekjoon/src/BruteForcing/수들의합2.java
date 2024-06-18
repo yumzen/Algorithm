@@ -1,4 +1,4 @@
-package BruteForce;
+package BruteForcing;
 //2003 수들의 합
 
 import java.io.BufferedReader;
