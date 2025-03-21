@@ -57,3 +57,28 @@ System.out.println(str); // "123"
 int[] arr = {1, 2, 3};
 List<Integer> list = Arrays.asList(1, 2, 3);
 ```
+## 5. 제곱근과 거듭제곱
+이때, 반환 값은 double이므로 정수로 변환하려면 형변환을 해야 함.
+- 제곱근: Math.sqrt() 메서드 사용
+```
+int num = 16;
+System.out.println(Math.sqrt(num)); // 4.0
+```
+- 거듭제곱: Math.pow() 메서드 사용
+```
+int num = 2;
+System.out.println(Math.pow(num, 3)); // 8.0
+```
+
+## 6. 최대값과 최소값
+List로 변환한 뒤 Collections 클래스의 max()와 min() 메서드를 사용
+- 최대값: Collections.max() 메서드 사용
+```
+List<Integer> list = Arrays.asList(1, 2, 3);
+System.out.println(Collections.max(list)); // 3
+```
+- 최소값: Collections.min() 메서드 사용
+```
+List<Integer> list = Arrays.asList(1, 2, 3);
+System.out.println(Collections.min(list)); // 1
+```
