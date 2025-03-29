@@ -57,6 +57,15 @@ System.out.println(str); // "123"
 int[] arr = {1, 2, 3};
 List<Integer> list = Arrays.asList(1, 2, 3);
 ```
+- 리스트를 배열로 변환
+```
+List<Integer> list = new ArrayList<>();
+list.add(1);
+list.add(2);
+list.add(3);
+int[] arr = list.stream().mapToInt(i -> i).toArray();
+```
+
 ## 5. 제곱근과 거듭제곱
 이때, 반환 값은 double이므로 정수로 변환하려면 형변환을 해야 함.
 - 제곱근: Math.sqrt() 메서드 사용
