@@ -91,3 +91,45 @@ System.out.println(Collections.max(list)); // 3
 List<Integer> list = Arrays.asList(1, 2, 3);
 System.out.println(Collections.min(list)); // 1
 ```
+
+## 7. 배열 정렬
+배열을 정렬할 때는 Arrays 클래스의 sort() 메서드를 사용
+- 오름차순 정렬
+```
+int[] arr = {3, 1, 2};
+Arrays.sort(arr);
+System.out.println(Arrays.toString(arr)); // [1, 2, 3]
+```
+- 내림차순 정렬
+```
+int[] arr = {3, 1, 2};
+Arrays.sort(arr, Collections.reverseOrder());
+```
+- 조건 오름차순 정렬
+- Comparator 인터페이스를 사용하여 정렬 조건을 지정
+```
+Integer[] arr = {3, 1, 2};
+Arrays.sort((a, b) -> map.get(a) - map.get(b));
+```
+- 조건 내림차순 정렬
+- Comparator 인터페이스를 사용하여 정렬 조건을 지정
+```
+Integer[] arr = {3, 1, 2};
+Arrays.sort((a, b) -> map.get(b) - map.get(a));
+```
+
+## 8. 배열 복사
+배열을 복사할 때는 Arrays 클래스의 copyOf() 메서드를 사용
+- 전체 복사
+```
+int[] arr = {1, 2, 3};
+int[] arr2 = Arrays.copyOf(arr, arr.length);
+System.out.println(Arrays.toString(arr2)); // [1, 2, 3]
+```
+- 일부 복사
+```
+int[] arr = {1, 2, 3};
+int[] arr2 = Arrays.copyOfRange(arr, 1, 2);
+System.out.println(Arrays.toString(arr2)); // [2]
+```
+
