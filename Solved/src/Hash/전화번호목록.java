@@ -5,16 +5,17 @@ import java.util.*;
 public class 전화번호목록 {
     public boolean solution(String[] phone_book) {
         boolean answer = true;
-        Map<String, Integer> map = new HashMap<>();
-        for(String phone: phone_book){
-            map.put(phone, 0);
+        // 1. HashSet 만들기
+        Set<String> set = new HashSet<>();
+        for(int i = 0 ; i <phone_book.length ; i++){
+            set.add(phone_book[i]);
         }
 
-        for(String phone: map.keySet()){
-            for(int i = 0 ; i <= phone.length(); i++){
-                if(map.containsKey(phone.substring(0, i))){
-                    answer = false;
-                    break;
+        // 2. 접두어 확인하기
+        for (String num : phone_book) {
+            for (int i = 1; i < num.length(); i++) {
+                if (set.contains(num.substring(0, i))) {
+                    return false;
                 }
             }
         }
